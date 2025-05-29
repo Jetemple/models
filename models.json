@@ -1,0 +1,500 @@
+{
+    "version": "0.0.1",
+    "last_updated": "2025-01-27T12:00:00Z",
+    "changelog": {
+        "message": "Initial models supported. Includes up to the latest Claude 4 release.",
+        "changes": [
+            "Added initial model support across multiple providers",
+            "Included latest Claude 4 models (Opus 4, Sonnet 4, 3.7 Sonnet)",
+            "Added complete OpenAI model lineup with GPT-4.1 series and O-series reasoning models",
+            "Added Google Gemini 2.5 models with hybrid reasoning capabilities",
+            "Added Grok models including latest Grok 3 variants",
+            "Comprehensive pricing information with input and output costs",
+            "Support for text only models"
+        ],
+        "added_models": [
+            "grok-3-latest",
+            "grok-3-fast-latest",
+            "grok-3-mini-latest",
+            "grok-3-mini-fast-latest"
+        ],
+        "updated_models": []
+    },
+    "providers": {
+        "openAI": [
+            {
+                "id": "gpt-4.1",
+                "name": "GPT-4.1",
+                "description": "Smartest model for complex tasks",
+                "provider": "openAI",
+                "contextLength": 1000000,
+                "isDefault": true,
+                "pricingTier": "moderate",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming"
+                ],
+                "input": "$2.00",
+                "cachedInput": "$0.50",
+                "output": "$8.00",
+                "isNew": true
+            },
+            {
+                "id": "gpt-4.1-mini",
+                "name": "GPT-4.1 Mini",
+                "description": "Affordable model balancing speed and intelligence",
+                "provider": "openAI",
+                "contextLength": 1000000,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming"
+                ],
+                "input": "$0.40",
+                "cachedInput": "$0.10",
+                "output": "$1.60",
+                "isNew": true
+            },
+            {
+                "id": "gpt-4.1-nano",
+                "name": "GPT-4.1 Nano",
+                "description": "Fastest, most cost-effective model for low-latency tasks",
+                "provider": "openAI",
+                "contextLength": 1000000,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming"
+                ],
+                "input": "$0.10",
+                "cachedInput": "$0.025",
+                "output": "$0.40",
+                "isNew": true
+            },
+            {
+                "id": "gpt-4.5-preview",
+                "name": "GPT-4.5 Preview",
+                "description": "Next-generation preview model with advanced capabilities",
+                "provider": "openAI",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "expensive",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming"
+                ],
+                "input": "$75.00",
+                "cachedInput": "$37.50",
+                "output": "$150.00",
+                "isNew": true
+            },
+            {
+                "id": "gpt-4o",
+                "name": "GPT-4o",
+                "description": "Great for most tasks",
+                "provider": "openAI",
+                "contextLength": 130000,
+                "isDefault": false,
+                "pricingTier": "expensive",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming"
+                ],
+                "input": "$5.00",
+                "cachedInput": "$1.25",
+                "output": "$15.00",
+                "isNew": false
+            },
+            {
+                "id": "gpt-4o-mini",
+                "name": "GPT-4o Mini",
+                "description": "Fast and affordable with excellent performance",
+                "provider": "openAI",
+                "contextLength": 128000,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming"
+                ],
+                "input": "$0.15",
+                "cachedInput": "$0.075",
+                "output": "$0.60",
+                "isNew": false
+            },
+            {
+                "id": "gpt-4o-search-preview",
+                "name": "GPT-4o Search Preview",
+                "description": "GPT model for web search in Chat Completions",
+                "provider": "openAI",
+                "contextLength": 128000,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming",
+                    "search"
+                ],
+                "input": "$2.50",
+                "output": "$10.00",
+                "maxOutputTokens": 16384,
+                "isNew": false
+            },
+            {
+                "id": "gpt-4o-mini-search-preview",
+                "name": "GPT-4o Mini Search Preview",
+                "description": "Affordable GPT model for web search capabilities",
+                "provider": "openAI",
+                "contextLength": 128000,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "capabilities": [
+                    "text",
+                    "function_calling",
+                    "streaming",
+                    "search"
+                ],
+                "input": "$0.15",
+                "output": "$0.60",
+                "isNew": false
+            },
+            {
+                "id": "o1",
+                "name": "o1",
+                "description": "Advanced reasoning model with enhanced problem-solving",
+                "provider": "openAI",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "expensive",
+                "capabilities": [
+                    "text",
+                    "reasoning",
+                    "streaming"
+                ],
+                "input": "$15.00",
+                "cachedInput": "$7.50",
+                "output": "$60.00",
+                "isNew": false
+            },
+            {
+                "id": "o3",
+                "name": "o3",
+                "description": "Next-generation reasoning model with improved capabilities",
+                "provider": "openAI",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "expensive",
+                "capabilities": [
+                    "text",
+                    "reasoning",
+                    "streaming"
+                ],
+                "input": "$10.00",
+                "cachedInput": "$2.50",
+                "output": "$40.00",
+                "isNew": false
+            },
+            {
+                "id": "o3-mini",
+                "name": "o3 Mini",
+                "description": "Efficient reasoning model for cost-effective problem solving",
+                "provider": "openAI",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "capabilities": [
+                    "text",
+                    "reasoning",
+                    "streaming"
+                ],
+                "input": "$1.10",
+                "cachedInput": "$0.55",
+                "output": "$4.40",
+                "isNew": false
+            },
+            {
+                "id": "o4-mini",
+                "name": "o4 Mini",
+                "description": "Latest generation compact reasoning model",
+                "provider": "openAI",
+                "contextLength": 200000,
+                "isDefault": true,
+                "pricingTier": "moderate",
+                "capabilities": [
+                    "text",
+                    "reasoning",
+                    "streaming"
+                ],
+                "input": "$1.10",
+                "cachedInput": "$0.275",
+                "output": "$4.40",
+                "isNew": false
+            },
+            {
+                "id": "o1-mini",
+                "name": "o1 Mini",
+                "description": "Compact reasoning model with balanced performance",
+                "provider": "openAI",
+                "contextLength": 128000,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "capabilities": [
+                    "text",
+                    "reasoning",
+                    "streaming"
+                ],
+                "input": "$1.10",
+                "cachedInput": "$0.55",
+                "output": "$4.40",
+                "isNew": false
+            }
+        ],
+        "anthropic": [
+            {
+                "id": "claude-opus-4-20250514",
+                "name": "Claude Opus 4",
+                "description": "Most intelligent model for complex tasks",
+                "provider": "anthropic",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "expensive",
+                "input": "$15.00",
+                "cachedInput": "$7.50",
+                "output": "$75.00",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "document_analysis",
+                    "streaming"
+                ],
+                "isNew": true
+            },
+            {
+                "id": "claude-sonnet-4-20250514",
+                "name": "Claude Sonnet 4",
+                "description": "Optimal balance of intelligence, cost, and speed",
+                "provider": "anthropic",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "input": "$3.00",
+                "cachedInput": "$7.50",
+                "output": "$15.00",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "document_analysis",
+                    "streaming"
+                ],
+                "isNew": true
+            },
+            {
+                "id": "claude-3-5-haiku-20241022",
+                "name": "Claude 3.5 Haiku",
+                "description": "Fast and affordable model for most tasks",
+                "provider": "anthropic",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "input": "$0.80",
+                "cachedInput": "$0.075",
+                "output": "$4.00",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "document_analysis",
+                    "streaming"
+                ],
+                "isNew": false
+            },
+            {
+                "id": "claude-3-7-sonnet-20250219",
+                "name": "Claude 3.7 Sonnet",
+                "description": "Latest and most capable Claude model",
+                "provider": "anthropic",
+                "contextLength": 200000,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "input": "$3.00",
+                "cachedInput": "$0.50",
+                "output": "$15.00",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "document_analysis",
+                    "streaming"
+                ],
+                "isNew": true
+            }
+        ],
+        "gemini": [
+            {
+                "id": "gemini-2.5-flash-preview-05-20",
+                "name": "Gemini 2.5 Flash Preview",
+                "description": "First hybrid reasoning model with adaptive thinking and 1M token context",
+                "provider": "gemini",
+                "contextLength": 1048576,
+                "isDefault": true,
+                "pricingTier": "cheap",
+                "input": "$0.15",
+                "cachedInput": "$0.0375",
+                "output": "$0.60",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "audio",
+                    "video",
+                    "thinking",
+                    "streaming"
+                ],
+                "isNew": true
+            },
+            {
+                "id": "gemini-2.5-pro-preview-05-06",
+                "name": "Gemini 2.5 Pro Preview",
+                "description": "State-of-the-art multipurpose model excelling at coding and complex reasoning",
+                "provider": "gemini",
+                "contextLength": 1048576,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "input": "$1.25",
+                "cachedInput": "$0.31",
+                "output": "$10.00",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "audio",
+                    "video",
+                    "thinking",
+                    "streaming"
+                ],
+                "isNew": true
+            },
+            {
+                "id": "gemini-2.0-flash",
+                "name": "Gemini 2.0 Flash",
+                "description": "Balanced multimodal model with next generation features and realtime streaming",
+                "provider": "gemini",
+                "contextLength": 1048576,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "input": "$0.10",
+                "cachedInput": "$0.025",
+                "output": "$0.40",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "audio",
+                    "video",
+                    "streaming"
+                ]
+            },
+            {
+                "id": "gemini-2.0-flash-lite",
+                "name": "Gemini 2.0 Flash-Lite",
+                "description": "Most cost effective model built for at-scale usage with low latency",
+                "provider": "gemini",
+                "contextLength": 1048576,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "input": "$0.0075",
+                "output": "$0.30",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "audio",
+                    "video",
+                    "streaming"
+                ]
+            },
+            {
+                "id": "gemini-1.5-pro",
+                "name": "Gemini 1.5 Pro",
+                "description": "Complex reasoning tasks requiring more intelligence",
+                "provider": "gemini",
+                "contextLength": 2097152,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "capabilities": [
+                    "text",
+                    "vision",
+                    "audio",
+                    "video",
+                    "streaming"
+                ]
+            }
+        ],
+        "llama": [],
+        "grok": [
+            {
+                "id": "grok-3-latest",
+                "name": "Grok 3",
+                "description": "Latest version of Grok 3 model",
+                "provider": "grok",
+                "contextLength": 131072,
+                "isDefault": false,
+                "pricingTier": "moderate",
+                "capabilities": [
+                    "text",
+                    "streaming"
+                ],
+                "input": "$3.00",
+                "output": "$15.00"
+            },
+            {
+                "id": "grok-3-fast-latest",
+                "name": "Grok 3 Fast",
+                "description": "Latest version of Grok 3 Fast model",
+                "provider": "grok",
+                "contextLength": 131072,
+                "isDefault": false,
+                "pricingTier": "expensive",
+                "capabilities": [
+                    "text",
+                    "streaming"
+                ],
+                "input": "$5.00",
+                "output": "$25.00"
+            },
+            {
+                "id": "grok-3-mini-latest",
+                "name": "Grok 3 Mini",
+                "description": "Affordable and efficient Grok model",
+                "provider": "grok",
+                "contextLength": 131072,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "capabilities": [
+                    "text",
+                    "streaming"
+                ],
+                "input": "$0.30",
+                "output": "$0.50"
+            },
+            {
+                "id": "grok-3-mini-fast-latest",
+                "name": "Grok 3 Mini Fast",
+                "description": "Fast and affordable Grok model",
+                "provider": "grok",
+                "contextLength": 131072,
+                "isDefault": false,
+                "pricingTier": "cheap",
+                "capabilities": [
+                    "text",
+                    "streaming"
+                ],
+                "input": "$0.60",
+                "output": "$4.00"
+            }
+        ]
+    }
+}
