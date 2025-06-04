@@ -1,8 +1,8 @@
 {
     "version": "0.0.1",
-    "last_updated": "2025-05-03T12:00:00Z",
+    "last_updated": "2025-05-04T12:00:00Z",
     "changelog": {
-        "message": "Popular models supported. Includes up to the latest Claude 4 release.",
+        "message": "Latest models supported. Includes up to the latest Claude 4 release.",
         "changes": [
             "Added initial model support across multiple providers",
             "Included latest Claude 4 models (Opus 4, Sonnet 4, 3.7 Sonnet)",
